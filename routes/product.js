@@ -1,11 +1,11 @@
 import express from "express"
-import { getAllCategories } from "../controllers/category.js";
+import { getProductsByCategoryId } from "../controllers/product.js";
 
 
 const router = express.Router()
 
 try {
-    router.get("/category", getAllCategories);
+    router.get("/:categoryId", getProductsByCategoryId);
 } catch (error) {
     console.error("Route Error:", error);
 }

@@ -8,7 +8,7 @@ const ProductSchema = new Schema({
     ar_url: { type: String},
     description: { type: String, },
     category: [{ type: mongoose.Schema.Types.ObjectId, required: true , ref:'Category'}],
-    address:{type:String, required: true},
+    address:{type:String},
     createdAt:{type:Date, default:Date.now},
     updatedAt:{type:Date, default:Date.now}
 })
